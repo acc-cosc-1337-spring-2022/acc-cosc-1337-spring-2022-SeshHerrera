@@ -1,7 +1,11 @@
 //write include statements
+#include "input.h"
+#include <iostream>
 
 
 //write namespace using statements
+using std::cout; using std::cin;
+
 
 /*
 Capture units and rate values from keyboard.
@@ -14,7 +18,18 @@ Total: 100
 */
 int main() 
 {
-	
+	int units;
+	double rate, total;
+
+	cout << "Enter units: ";
+	cin >> units; //captures
+
+	cout << "Enter rate: ";
+	cin >> rate;
+
+	total = get_total(units, rate);
+	cout << "Total: " << total << "\n";
+
 	
 	return 0;
 }
