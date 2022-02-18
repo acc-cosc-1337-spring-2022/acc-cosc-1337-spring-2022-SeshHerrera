@@ -1,6 +1,7 @@
 #include "decisions.h"
 //write include statement for decisions header
 
+using std::string;
 //Write code for function get_grade_points that accepts a string letter_grade and returns 
 //the grade_points for as follows:
 //given grade "A" returns 4
@@ -9,6 +10,51 @@
 //given grade "D" returns 1
 //given grade "F" returns 0
 //another other value return -1
+string get_letter_grade_using_if(int grade) {
+
+	if (grade >= 90 && grade <= 100){
+		return "A";
+	}
+	else if (grade >= 80 && grade <= 89){
+		return "B";
+	}
+	else if (grade >= 70 && grade <= 79){
+		return "C";
+	}
+	else if (grade >= 60 && grade <= 69){
+		return "D";
+	}
+	else {
+		return "F";
+	}
+
+}
+
+string get_letter_grade_using_switch(int grade) {
+	switch (grade)
+	{
+	
+		case 90 ... 100:
+			return "A";
+
+		case 80 ... 89:
+			return "B";
+
+		case 70 ... 79:
+			return "C";
+
+		case 60 ... 69:
+			return "D";
+		
+		case 0 ... 59:
+			return "F";
+		
+		default:
+			break;
+	}
+}
+
+
 int get_grade_points(std::string letter_grade)
 {
 	if (letter_grade == "A") 
