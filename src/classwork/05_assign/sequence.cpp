@@ -1,15 +1,80 @@
 //write include statements 
+#include <iostream>
+#include "sequence.h"
 
 
-/*
-Write code for void function display_vector that accepts parameter const reference vector of strings.
-The function will iterate through the vector and display a string per line.
-*/
+
+// gc-content
+double get_gc_content(const string& dna){
+    double total, gcContent;
+    char searching1 = 'G';
+    char searching2 = 'C';
+    double counter1 = 0; 
+    double counter2 = 0;
+
+    for (int i = 0; i < dna.length(); i++)
+    {
+        if(dna[i] == searching1){
+            counter1++;
+        }
+        else if (dna[i] == searching2){
+            counter2++;
+        }
+    }
+
+    gcContent = counter1 + counter2;
+    total = gcContent / dna.length();
+
+    return total;
+}
 
 
-/*
-Write code for void function update_vector_element that accepts parameter reference vector of strings,
-a string vector search_value, and a string replace_value.
-The function will iterate through the vector and search for the search_value and if found will
-replace the vector element with the replace_value.
-*/
+// reverse_string
+string get_reverse_string(string dna){
+    string reverse;
+    
+    for (int i = dna.size() - 1; i >= 0; --i)
+    {
+        reverse += dna[i];
+    }
+
+    return reverse;
+}
+
+
+// dna-complement
+string get_dna_complement(string dna){
+    string reverse;
+    string store;
+    string list { store };
+
+    for (size_t i = 0; i < dna.size(); i++)
+    {
+        if (dna[i] == 'A')
+        {
+            dna[i] = 'T'; 
+            list += 'T';
+        }
+
+        else if (dna[i] == 'T')
+        {
+            dna[i] = 'A';
+            list += 'A';
+        }
+
+        else if (dna[i] == 'C')
+        {
+            dna[i] = 'G';
+            list += 'G';
+        }
+
+        else if (dna[i] == 'G')
+        {
+            dna[i] = 'C';
+            list += 'C';
+        }
+        reverse = get_reverse_string(list);
+    }
+    return reverse;
+
+}

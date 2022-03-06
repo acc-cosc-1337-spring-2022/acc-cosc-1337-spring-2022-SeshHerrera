@@ -1,9 +1,15 @@
 //write include statements for string and vector
+#include <iostream>
+#include "string"
 
+using std::string; using std::cout;
 
 /*
 Write prototype for void function display_vector that accepts a parameter const reference vector of strings
 */
+double get_gc_content(const string& dna);
+string get_reverse_string(string dna);
+string get_dna_complement(string dna);
 
 
 /*
