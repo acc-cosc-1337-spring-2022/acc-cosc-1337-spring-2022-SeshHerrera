@@ -1,9 +1,11 @@
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 
 using std::cout; using std::cin;
 
 int main() 
 {
+	TicTacToeManager manager;
 	tic_tac_toe game;
 	string first_player;
 	char user_choice;
@@ -28,7 +30,7 @@ int main()
 				cout << "enter to place position 1-9:  ";
 				cin >> position;
 				game.mark_board(position);
-				game.display_board();
+				/*game.display_board();*/
 			}
 
 

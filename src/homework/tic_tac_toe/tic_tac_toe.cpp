@@ -57,14 +57,14 @@ void tic_tac_toe::mark_board(int position)
 }
 
 
-void tic_tac_toe::display_board()const
+/*void tic_tac_toe::display_board()const
 {
     for(int i=0; i < 9; i+=3)
     {
         cout << pegs[i] << "|" << pegs[i+1] << "|" << pegs[i+2] << "\n";
     }
 }
-
+*/
 
 void tic_tac_toe::set_next_player()
 {

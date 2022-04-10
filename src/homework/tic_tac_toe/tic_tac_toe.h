@@ -29,8 +29,10 @@ public:
     void mark_board(int position);
     void display_board()const;
     string get_player()const{return player;};
-
     string get_winner()const{return winner;};
+    friend std::ostream& operator<<(std::ostream&, tic_tac_toe&);
+    friend std::istream& operator>>(std::istream&, tic_tac_toe&);
+
 };
 
 #endif
